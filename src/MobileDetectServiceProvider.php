@@ -5,17 +5,18 @@ namespace Riverskies\Laravel\MobileDetect;
 use Detection\MobileDetect;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use Riverskies\Laravel\MobileDetect\Contracts\BladeDirectiveInterface;
 
 class MobileDetectServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
      *
-     * @return void
+     * @param MobileDetect $mobileDetect
      */
-    public function boot()
+    public function boot(MobileDetect $mobileDetect)
     {
-        $this->registerBladeDirectives();
+        $this->registerBladeDirectives($mobileDetect);
     }
 
     /**
@@ -30,95 +31,24 @@ class MobileDetectServiceProvider extends ServiceProvider
         });
     }
 
-    private function registerBladeDirectives()
+    /**
+     * @param MobileDetect $mobileDetect
+     */
+    private function registerBladeDirectives(MobileDetect $mobileDetect)
     {
-        $this->registerDesktopDirectives();
-        $this->registerHandheldDirectives();
-        $this->registerTabletDirectives();
-        $this->registerMobileDirectives();
+        $this->registerDirective(new DesktopBladeDirective($mobileDetect));
+        $this->registerDirective(new HandheldBladeDirective($mobileDetect));
+        $this->registerDirective(new TabletBladeDirective($mobileDetect));
+        $this->registerDirective(new MobileBladeDirective($mobileDetect));
     }
 
-    private function registerDesktopDirectives()
+    /**
+     * @param BladeDirectiveInterface $directive
+     */
+    private function registerDirective(BladeDirectiveInterface $directive)
     {
-        Blade::directive('desktop', function ($expression) {
-            return "
-                <?php if (!app('mobile-detect')->isMobile()) : ?>
-            ";
-        });
-
-        Blade::directive('elsedesktop', function ($expression) {
-            return "
-                <?php else: ?>
-            ";
-        });
-
-        Blade::directive('enddesktop', function ($expression) {
-            return "
-                <?php endif; ?>
-            ";
-        });
-    }
-
-    private function registerHandheldDirectives()
-    {
-        Blade::directive('handheld', function ($expression) {
-            return "
-                <?php if (app('mobile-detect')->isMobile()) : ?>
-            ";
-        });
-
-        Blade::directive('elsehandheld', function ($expression) {
-            return "
-                <?php else: ?>
-            ";
-        });
-
-        Blade::directive('endhandheld', function ($expression) {
-            return "
-                <?php endif; ?>
-            ";
-        });
-    }
-
-    private function registerTabletDirectives()
-    {
-        Blade::directive('tablet', function ($expression) {
-            return "
-                <?php if (app('mobile-detect')->isTablet()) : ?>
-            ";
-        });
-
-        Blade::directive('elsetablet', function ($expression) {
-            return "
-                <?php else: ?>
-            ";
-        });
-
-        Blade::directive('endtablet', function ($expression) {
-            return "
-                <?php endif; ?>
-            ";
-        });
-    }
-
-    private function registerMobileDirectives()
-    {
-        Blade::directive('mobile', function ($expression) {
-            return "
-                <?php if (app('mobile-detect')->isMobile() && ! app('mobile-detect')->isTablet()) : ?>
-            ";
-        });
-
-        Blade::directive('elsemobile', function ($expression) {
-            return "
-                <?php else: ?>
-            ";
-        });
-
-        Blade::directive('endmobile', function ($expression) {
-            return "
-                <?php endif; ?>
-            ";
-        });
+        Blade::directive($directive->openingTag(), [$directive, 'openingHandler']);
+        Blade::directive($directive->closingTag(), [$directive, 'closingHandler']);
+        Blade::directive($directive->alternatingTag(), [$directive, 'alternatingHandler']);
     }
 }

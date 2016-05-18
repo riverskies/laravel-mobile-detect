@@ -21,13 +21,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HandheldBladeDirectiveTest.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/HandheldBladeDirectiveTest.php">
+      <file leaf-file-name="MobileDetectServiceProvider.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MobileDetectServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2294">
-              <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+            <state relative-caret-position="555">
+              <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
               <folding>
-                <element signature="e#7#34#0#PHP" expanded="true" />
+                <element signature="e#51#78#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -41,7 +41,6 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/phpunit.xml" />
         <option value="$PROJECT_DIR$/src/MobileDetect.php" />
-        <option value="$PROJECT_DIR$/src/MobileDetectServiceProvider.php" />
         <option value="$PROJECT_DIR$/tests/MobileDetect.php" />
         <option value="$PROJECT_DIR$/src/BladeDirectiveInterface.php" />
         <option value="$PROJECT_DIR$/src/Contracts/BladeDirectiveInterface.php" />
@@ -54,6 +53,7 @@
         <option value="$PROJECT_DIR$/tests/TabletBladeDirectiveTest.php" />
         <option value="$PROJECT_DIR$/src/HandheldBladeDirective.php" />
         <option value="$PROJECT_DIR$/tests/HandheldBladeDirectiveTest.php" />
+        <option value="$PROJECT_DIR$/src/MobileDetectServiceProvider.php" />
       </list>
     </option>
   </component>
@@ -155,6 +155,7 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../t2lr-myappro" />
+    <property name="ignore_missing_gitignore" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -211,12 +212,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1463592371399</updated>
-      <workItem from="1463592372510" duration="7476000" />
+      <workItem from="1463592372510" duration="8080000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7476000" />
+    <option name="totallyTimeSpent" value="8080000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -337,52 +338,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MobileDetectServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="681">
-          <caret line="119" column="31" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="31" />
-          <folding>
-            <marker date="1463594537000" expanded="true" signature="55:156" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="215:3003" placeholder="{...}" />
-            <marker date="1463594537000" expanded="true" signature="225:301" placeholder=" Bootstrap the application services. ..." />
-            <marker date="1463594537000" expanded="true" signature="330:384" placeholder="{...}" />
-            <marker date="1463594537000" expanded="true" signature="393:468" placeholder=" Register the application services. ..." />
-            <marker date="1463594537000" expanded="true" signature="501:627" placeholder="{...}" />
-            <marker date="1463594537000" expanded="true" signature="538:619" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="572:618" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="675:862" placeholder="{...}" />
-            <marker date="1463594537000" expanded="true" signature="912:1389" placeholder="{...}" />
-            <marker date="1463594537000" expanded="true" signature="944:1091" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="979:1090" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="1120:1236" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="1159:1235" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="1265:1381" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="1303:1380" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="1440:1919" placeholder="{...}" />
-            <marker date="1463594537000" expanded="true" signature="1472:1619" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="1508:1618" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="1648:1765" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="1688:1764" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="1794:1911" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="1833:1910" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="1968:2441" placeholder="{...}" />
-            <marker date="1463594537000" expanded="true" signature="2000:2145" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="2034:2144" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="2174:2289" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="2212:2288" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="2318:2433" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="2355:2432" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="2490:3001" placeholder="{...}" />
-            <marker date="1463594537000" expanded="true" signature="2522:2705" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="2556:2704" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="2734:2849" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="2772:2848" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="2878:2993" placeholder="..." />
-            <marker date="1463594537000" expanded="true" signature="2915:2992" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MobileBladeDirective.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
@@ -475,34 +430,6 @@
             <marker date="1463600247000" expanded="true" signature="5643:5866" placeholder="..." />
             <marker date="1463600247000" expanded="true" signature="5692:5731" placeholder="..." />
             <marker date="1463600247000" expanded="true" signature="5812:5855" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DesktopBladeDirective.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="94" column="17" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
-          <folding>
-            <marker date="1463600433000" expanded="false" signature="55:149" placeholder="..." />
-            <marker date="1463600433000" expanded="true" signature="213:1839" placeholder="{...}" />
-            <marker date="1463600433000" expanded="true" signature="223:254" placeholder=" @var MobileDetect ..." />
-            <marker date="1463600433000" expanded="true" signature="292:387" placeholder=" TabletBladeDirective constructor. ..." />
-            <marker date="1463600433000" expanded="true" signature="449:506" placeholder="{...}" />
-            <marker date="1463600433000" expanded="true" signature="515:588" placeholder=" Returns the Blade opening tag. ..." />
-            <marker date="1463600433000" expanded="true" signature="623:661" placeholder="{...}" />
-            <marker date="1463600433000" expanded="true" signature="670:765" placeholder=" Compiles the Blade opening. ..." />
-            <marker date="1463600433000" expanded="true" signature="815:957" placeholder="{...}" />
-            <marker date="1463600433000" expanded="true" signature="966:1038" placeholder=" Returns the Blade closing tag. ..." />
-            <marker date="1463600433000" expanded="true" signature="1073:1114" placeholder="{...}" />
-            <marker date="1463600433000" expanded="true" signature="1123:1218" placeholder=" Compiles the Blade closing. ..." />
-            <marker date="1463600433000" expanded="true" signature="1268:1314" placeholder="{...}" />
-            <marker date="1463600433000" expanded="true" signature="1323:1399" placeholder=" Returns the Blade alternating tag. ..." />
-            <marker date="1463600433000" expanded="true" signature="1438:1480" placeholder="{...}" />
-            <marker date="1463600433000" expanded="true" signature="1489:1592" placeholder=" Compiles the Blade alternating tag. ..." />
-            <marker date="1463600433000" expanded="true" signature="1646:1691" placeholder="{...}" />
-            <marker date="1463600433000" expanded="true" signature="1700:1726" placeholder=" @return bool ..." />
-            <marker date="1463600433000" expanded="true" signature="1775:1837" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -619,10 +546,79 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/HandheldBladeDirectiveTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2294">
-          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+        <state relative-caret-position="370">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
           <folding>
-            <element signature="e#7#34#0#PHP" expanded="true" />
+            <marker date="1463600916000" expanded="true" signature="11:188" placeholder="..." />
+            <marker date="1463600916000" expanded="true" signature="257:5928" placeholder="{...}" />
+            <marker date="1463600916000" expanded="true" signature="267:330" placeholder=" Blade template engine instance. ..." />
+            <marker date="1463600916000" expanded="true" signature="363:435" placeholder=" @param bool $returnMobile ..." />
+            <marker date="1463600916000" expanded="true" signature="517:844" placeholder="{...}" />
+            <marker date="1463600916000" expanded="true" signature="763:836" placeholder="..." />
+            <marker date="1463600916000" expanded="true" signature="914:1087" placeholder="{...}" />
+            <marker date="1463600916000" expanded="true" signature="1157:1342" placeholder="{...}" />
+            <marker date="1463600916000" expanded="true" signature="1427:1618" placeholder="{...}" />
+            <marker date="1463600916000" expanded="true" signature="1723:1912" placeholder="{...}" />
+            <marker date="1463600916000" expanded="true" signature="1921:2155" placeholder=" Minifying HTML content. ..." />
+            <marker date="1463600916000" expanded="true" signature="2191:3329" placeholder="{...}" />
+            <marker date="1463600916000" expanded="true" signature="3338:3400" placeholder=" Creates the context. ..." />
+            <marker date="1463600916000" expanded="true" signature="3441:3980" placeholder="{...}" />
+            <marker date="1463600916000" expanded="true" signature="3617:3732" placeholder="..." />
+            <marker date="1463600916000" expanded="true" signature="3763:3939" placeholder="..." />
+            <marker date="1463600916000" expanded="true" signature="3989:4121" placeholder=" Sets up template engine to mimic Laravel. ..." />
+            <marker date="1463600916000" expanded="true" signature="4200:4714" placeholder="{...}" />
+            <marker date="1463600916000" expanded="true" signature="4350:4428" placeholder="..." />
+            <marker date="1463600916000" expanded="true" signature="4473:4551" placeholder="..." />
+            <marker date="1463600916000" expanded="true" signature="4596:4682" placeholder="..." />
+            <marker date="1463600916000" expanded="true" signature="4723:4756" placeholder=" Tear down function. ..." />
+            <marker date="1463600916000" expanded="true" signature="4789:4990" placeholder="{...}" />
+            <marker date="1463600916000" expanded="true" signature="4999:5071" placeholder=" Helper to set the directories. ..." />
+            <marker date="1463600916000" expanded="true" signature="5111:5325" placeholder="{...}" />
+            <marker date="1463600916000" expanded="true" signature="5334:5434" placeholder=" Delete a directory with recursive check. ..." />
+            <marker date="1463600916000" expanded="true" signature="5481:5925" placeholder="..." />
+            <marker date="1463600916000" expanded="true" signature="5515:5549" placeholder="..." />
+            <marker date="1463600916000" expanded="true" signature="5580:5622" placeholder="..." />
+            <marker date="1463600916000" expanded="true" signature="5667:5890" placeholder="..." />
+            <marker date="1463600916000" expanded="true" signature="5716:5755" placeholder="..." />
+            <marker date="1463600916000" expanded="true" signature="5836:5879" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DesktopBladeDirective.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+          <folding>
+            <marker date="1463600433000" expanded="false" signature="55:149" placeholder="..." />
+            <marker date="1463600433000" expanded="true" signature="213:1839" placeholder="{...}" />
+            <marker date="1463600433000" expanded="true" signature="223:254" placeholder=" @var MobileDetect ..." />
+            <marker date="1463600433000" expanded="true" signature="292:387" placeholder=" TabletBladeDirective constructor. ..." />
+            <marker date="1463600433000" expanded="true" signature="449:506" placeholder="{...}" />
+            <marker date="1463600433000" expanded="true" signature="515:588" placeholder=" Returns the Blade opening tag. ..." />
+            <marker date="1463600433000" expanded="true" signature="623:661" placeholder="{...}" />
+            <marker date="1463600433000" expanded="true" signature="670:765" placeholder=" Compiles the Blade opening. ..." />
+            <marker date="1463600433000" expanded="true" signature="815:957" placeholder="{...}" />
+            <marker date="1463600433000" expanded="true" signature="966:1038" placeholder=" Returns the Blade closing tag. ..." />
+            <marker date="1463600433000" expanded="true" signature="1073:1114" placeholder="{...}" />
+            <marker date="1463600433000" expanded="true" signature="1123:1218" placeholder=" Compiles the Blade closing. ..." />
+            <marker date="1463600433000" expanded="true" signature="1268:1314" placeholder="{...}" />
+            <marker date="1463600433000" expanded="true" signature="1323:1399" placeholder=" Returns the Blade alternating tag. ..." />
+            <marker date="1463600433000" expanded="true" signature="1438:1480" placeholder="{...}" />
+            <marker date="1463600433000" expanded="true" signature="1489:1592" placeholder=" Compiles the Blade alternating tag. ..." />
+            <marker date="1463600433000" expanded="true" signature="1646:1691" placeholder="{...}" />
+            <marker date="1463600433000" expanded="true" signature="1700:1726" placeholder=" @return bool ..." />
+            <marker date="1463600433000" expanded="true" signature="1775:1837" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MobileDetectServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+          <folding>
+            <element signature="e#51#78#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
