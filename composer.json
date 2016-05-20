@@ -9,7 +9,7 @@
             "email": "barnabas@riverskies.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "Riverskies\\Laravel\\MobileDetect\\": "src/"
