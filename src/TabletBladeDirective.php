@@ -2,26 +2,10 @@
 
 namespace Riverskies\Laravel\MobileDetect;
 
-use Detection\MobileDetect;
 use Riverskies\Laravel\MobileDetect\Contracts\BladeDirectiveInterface;
 
 class TabletBladeDirective implements BladeDirectiveInterface
 {
-    /**
-     * @var MobileDetect
-     */
-    private $mobileDetect;
-
-    /**
-     * TabletBladeDirective constructor.
-     *
-     * @param MobileDetect $mobileDetect
-     */
-    public function __construct(MobileDetect $mobileDetect)
-    {
-        $this->mobileDetect = $mobileDetect;
-    }
-
     /**
      * Returns the Blade opening tag.
      *
@@ -40,9 +24,7 @@ class TabletBladeDirective implements BladeDirectiveInterface
      */
     public function openingHandler($expression)
     {
-        $shouldDisplay = $this->shouldDisplayForTablet() ? "true" : "false";
-
-        return "<?php if ({$shouldDisplay}) : ?>";
+        return "<?php if (app('mobile-detect')->isTablet()) : ?>";
     }
 
     /**
@@ -85,13 +67,5 @@ class TabletBladeDirective implements BladeDirectiveInterface
     public function alternatingHandler($expression)
     {
         return "<?php else: ?>";
-    }
-
-    /**
-     * @return bool
-     */
-    private function shouldDisplayForTablet()
-    {
-        return $this->mobileDetect->isTablet();
     }
 }

@@ -21,6 +21,7 @@
     "require-dev": {
         "phpunit/phpunit": "^5.3",
         "phpspec/prophecy-phpunit": "^1.1",
-        "philo/laravel-blade": "^3.1"
+        "philo/laravel-blade": "^3.1",
+        "laravel/laravel": "5.2.*"
     }
 }
