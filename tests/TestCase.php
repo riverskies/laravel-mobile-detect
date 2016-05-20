@@ -108,9 +108,9 @@ abstract class TestCase extends \Illuminate\Foundation\Testing\TestCase
      */
     protected function getDirectories()
     {
-        $resource = __DIR__ . '/../resources';
-        $view =     __DIR__ . '/../resources/views';
-        $cache =    __DIR__ . '/../resources/cache';
+        $resource = __DIR__ . '/resources';
+        $view =     __DIR__ . '/resources/views';
+        $cache =    __DIR__ . '/resources/cache';
 
         return array($resource, $view, $cache);
     }
