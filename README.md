@@ -38,12 +38,16 @@ Use the new Blade directives in your template files:
 ```
 
 ### Available directives
-`@desktop/@elsedesktop/@enddesktop` - for destkop devices
+`@desktop`, `@elsedesktop`, `@enddesktop` - for destkop devices
 
-`@handheld/@elsehandheld/@endhandheld` - for handheld (both mobile and tablet) devices
+`@handheld`, `@elsehandheld`, `@endhandheld` - for non-desktop (mobile and tablet) devices
 
-`@tablet/@elsetablet/@endtablet` - for tablet devices
+`@tablet`, `@elsetablet`, `@endtablet` - for tablet devices
 
-`@mobile/@elsemobile/@endmobile` - for mobile devices
+`@nottablet`, `@elsenottablet`, `@endnottablet` - for non-tablet (desktop or mobile) devices
+
+`@mobile`, `@elsemobile`, `@endmobile` - for mobile devices
+
+`@notmobile`, `@elsenotmobile`, `@endnotmobile` - for non-mobile (desktop or tablet) devices
 
 The usage of `@else...` directives are optional.
