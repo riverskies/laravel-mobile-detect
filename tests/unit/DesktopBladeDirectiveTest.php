@@ -1,6 +1,6 @@
 <?php
 
-use Riverskies\Laravel\MobileDetect\DesktopBladeDirective;
+use Riverskies\Laravel\MobileDetect\Directives\DesktopBladeDirective;
 
 class DesktopBladeDirectiveTest extends TestCase
 {

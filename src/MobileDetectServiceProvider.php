@@ -6,6 +6,12 @@ use Detection\MobileDetect;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Riverskies\Laravel\MobileDetect\Contracts\BladeDirectiveInterface;
+use Riverskies\Laravel\MobileDetect\Directives\DesktopBladeDirective;
+use Riverskies\Laravel\MobileDetect\Directives\HandheldBladeDirective;
+use Riverskies\Laravel\MobileDetect\Directives\MobileBladeDirective;
+use Riverskies\Laravel\MobileDetect\Directives\NotMobileBladeDirective;
+use Riverskies\Laravel\MobileDetect\Directives\NotTabletBladeDirective;
+use Riverskies\Laravel\MobileDetect\Directives\TabletBladeDirective;
 
 class MobileDetectServiceProvider extends ServiceProvider
 {
@@ -39,7 +45,9 @@ class MobileDetectServiceProvider extends ServiceProvider
         $this->registerDirective(new DesktopBladeDirective($mobileDetect));
         $this->registerDirective(new HandheldBladeDirective($mobileDetect));
         $this->registerDirective(new TabletBladeDirective($mobileDetect));
+        $this->registerDirective(new NotTabletBladeDirective($mobileDetect));
         $this->registerDirective(new MobileBladeDirective($mobileDetect));
+        $this->registerDirective(new NotMobileBladeDirective($mobileDetect));
     }
 
     /**

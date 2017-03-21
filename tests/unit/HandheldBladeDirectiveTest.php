@@ -1,6 +1,6 @@
 <?php
 
-use Riverskies\Laravel\MobileDetect\HandheldBladeDirective;
+use Riverskies\Laravel\MobileDetect\Directives\HandheldBladeDirective;
 
 class HandheldBladeDirectiveTest extends TestCase
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Riverskies\Laravel\MobileDetect;
+namespace Riverskies\Laravel\MobileDetect\Directives;
 
 use Riverskies\Laravel\MobileDetect\Contracts\BladeDirectiveInterface;
 
-class NotTabletBladeDirective implements BladeDirectiveInterface
+class TabletBladeDirective implements BladeDirectiveInterface
 {
     /**
      * Returns the Blade opening tag.
@@ -13,7 +13,7 @@ class NotTabletBladeDirective implements BladeDirectiveInterface
      */
     public function openingTag()
     {
-        return 'nottablet';
+        return 'tablet';
     }
 
     /**
@@ -24,7 +24,7 @@ class NotTabletBladeDirective implements BladeDirectiveInterface
      */
     public function openingHandler($expression)
     {
-        return "<?php if (!app('mobile-detect')->isTablet()) : ?>";
+        return "<?php if (app('mobile-detect')->isTablet()) : ?>";
     }
 
     /**
@@ -34,7 +34,7 @@ class NotTabletBladeDirective implements BladeDirectiveInterface
      */
     public function closingTag()
     {
-        return 'endnottablet';
+        return 'endtablet';
     }
 
     /**
@@ -55,7 +55,7 @@ class NotTabletBladeDirective implements BladeDirectiveInterface
      */
     public function alternatingTag()
     {
-        return 'elsenottablet';
+        return 'elsetablet';
     }
 
     /**

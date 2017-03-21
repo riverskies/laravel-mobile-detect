@@ -1,6 +1,6 @@
 <?php
 
-use Riverskies\Laravel\MobileDetect\NotTabletBladeDirective;
+use Riverskies\Laravel\MobileDetect\Directives\NotTabletBladeDirective;
 
 class NotTabletBladeDirectiveTest extends TestCase
 {
