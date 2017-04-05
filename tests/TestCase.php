@@ -32,14 +32,15 @@ abstract class TestCase extends \Illuminate\Foundation\Testing\TestCase
     }
 
     /**
-     * @param bool $returnMobile
-     * @param bool $returnTablet
+     * Set up mobile detect mock expectations.
+     * 
+     * @param $callback
      */
-    protected function expectReturn($returnMobile = false, $returnTablet = false)
+    protected function expectMobileDetectReturn($callback)
     {
         $mobileDetect = $this->prophesize(MobileDetect::class);
-        $mobileDetect->isMobile()->willReturn($returnMobile);
-        $mobileDetect->isTablet()->willReturn($returnTablet);
+
+        $callback($mobileDetect);
 
         $this->app->singleton('mobile-detect', function($app) use ($mobileDetect) {
             return $mobileDetect->reveal();

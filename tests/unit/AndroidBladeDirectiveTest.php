@@ -1,8 +1,8 @@
 <?php
 
-use Riverskies\Laravel\MobileDetect\Directives\DesktopBladeDirective;
+use Riverskies\Laravel\MobileDetect\Directives\AndroidBladeDirective;
 
-class DesktopBladeDirectiveTest extends TestCase
+class AndroidBladeDirectiveTest extends TestCase
 {
     /**
      * Set up the world.
@@ -11,14 +11,14 @@ class DesktopBladeDirectiveTest extends TestCase
     {
         parent::setUp();
 
-        $this->setUpTemplateEngine(new DesktopBladeDirective);
+        $this->setUpTemplateEngine(new AndroidBladeDirective);
     }
 
     /** @test */
-    public function it_will_render_if_desktop()
+    public function it_will_render_if_android()
     {
         $this->expectMobileDetectReturn(function($md) {
-            $md->isMobile()->willReturn(false);
+            $md->is('Android')->willReturn(true);
         });
 
         $html = $this->blade->view()->make('test')->render();
@@ -27,10 +27,10 @@ class DesktopBladeDirectiveTest extends TestCase
     }
 
     /** @test */
-    public function it_will_not_render_if_not_desktop()
+    public function it_will_not_render_if_not_android()
     {
         $this->expectMobileDetectReturn(function($md) {
-            $md->isMobile()->willReturn(true);
+            $md->is('Android')->willReturn(false);
         });
 
         $html = $this->blade->view()->make('test')->render();
@@ -39,10 +39,10 @@ class DesktopBladeDirectiveTest extends TestCase
     }
 
     /** @test */
-    public function it_will_display_else_if_exist_and_not_desktop()
+    public function it_will_display_else_if_exist_and_not_android()
     {
         $this->expectMobileDetectReturn(function($md) {
-            $md->isMobile()->willReturn(true);
+            $md->is('Android')->willReturn(false);
         });
 
         $html = $this->blade->view()->make('test-else')->render();
@@ -51,10 +51,10 @@ class DesktopBladeDirectiveTest extends TestCase
     }
 
     /** @test */
-    public function it_will_still_display_desktop_if_is_desktop_and_else_exists()
+    public function it_will_still_display_android_if_is_android_and_else_exists()
     {
         $this->expectMobileDetectReturn(function($md) {
-            $md->isMobile()->willReturn(false);
+            $md->is('Android')->willReturn(true);
         });
 
         $html = $this->blade->view()->make('test-else')->render();

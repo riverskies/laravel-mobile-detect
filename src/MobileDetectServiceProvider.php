@@ -48,6 +48,8 @@ class MobileDetectServiceProvider extends ServiceProvider
         $this->registerDirective(new NotTabletBladeDirective($mobileDetect));
         $this->registerDirective(new MobileBladeDirective($mobileDetect));
         $this->registerDirective(new NotMobileBladeDirective($mobileDetect));
+        $this->registerDirective(new AndroidBladeDirective($mobileDetect));
+        $this->registerDirective(new iOSBladeDirective($mobileDetect));
     }
 
     /**
