@@ -50,4 +50,8 @@ Use the new Blade directives in your template files:
 
 `@notmobile`, `@elsenotmobile`, `@endnotmobile` - for non-mobile (desktop or tablet) devices
 
+`@ios`, `@elseios`, `@endios` - for iOS platforms
+
+`@android`, `@elseandroid`, `@endandroid` - for Android platforms
+
 The usage of `@else...` directives are optional.
