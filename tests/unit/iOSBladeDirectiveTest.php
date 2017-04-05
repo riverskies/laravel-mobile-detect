@@ -17,7 +17,7 @@ class iOSBladeDirectiveTest extends TestCase
     /** @test */
     public function it_will_not_render_if_not_ios()
     {
-        $this->expectReturn(true, false);
+        $this->expectHandheldOSReturn(false, false);
 
         $html = $this->blade->view()->make('test')->render();
 
@@ -27,7 +27,7 @@ class iOSBladeDirectiveTest extends TestCase
     /** @test */
     public function it_will_render_if_ios()
     {
-        $this->expectReturn(false, false);
+        $this->expectHandheldOSReturn(false, true);
 
         $html = $this->blade->view()->make('test')->render();
 
@@ -37,7 +37,7 @@ class iOSBladeDirectiveTest extends TestCase
     /** @test */
     public function it_will_display_else_if_exist_and_not_ios()
     {
-        $this->expectReturn(true, false);
+        $this->expectHandheldOSReturn(false, false);
 
         $html = $this->blade->view()->make('test-else')->render();
 
@@ -47,7 +47,7 @@ class iOSBladeDirectiveTest extends TestCase
     /** @test */
     public function it_will_still_display_ios_if_is_ios_and_else_exists()
     {
-        $this->expectReturn(false, false);
+        $this->expectHandheldOSReturn(false, true);
 
         $html = $this->blade->view()->make('test-else')->render();
 

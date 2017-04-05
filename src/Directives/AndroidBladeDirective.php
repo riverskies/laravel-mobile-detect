@@ -24,7 +24,7 @@ class AndroidBladeDirective implements BladeDirectiveInterface
      */
     public function openingHandler($expression)
     {
-        return "<?php if(!app('mobile-detect')->isAndroidOS()) : ?>";
+        return "<?php if(app('mobile-detect')->is('Android')) : ?>";
     }
 
     /**

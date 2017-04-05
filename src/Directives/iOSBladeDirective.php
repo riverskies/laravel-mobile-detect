@@ -18,13 +18,12 @@ class iOSBladeDirective implements BladeDirectiveInterface
 
     /**
      * Compiles the Blade opening.
-     *
      * @param $expression
      * @return mixed
      */
     public function openingHandler($expression)
     {
-        return "<?php if(!app('mobile-detect')->isiOS()) : ?>";
+        return "<?php if(app('mobile-detect')->is('iOS')) : ?>";
     }
 
     /**

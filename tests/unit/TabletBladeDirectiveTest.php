@@ -17,7 +17,7 @@ class TabletBladeDirectiveTest extends TestCase
     /** @test */
     public function it_will_not_render_if_not_tablet()
     {
-        $this->expectReturn(false, false);
+        $this->expectDeviceReturn(false, false);
 
         $html = $this->blade->view()->make('test')->render();
 
@@ -27,7 +27,7 @@ class TabletBladeDirectiveTest extends TestCase
     /** @test */
     public function it_will_render_if_tablet()
     {
-        $this->expectReturn(true, true);
+        $this->expectDeviceReturn(true, true);
 
         $html = $this->blade->view()->make('test')->render();
 
@@ -37,7 +37,7 @@ class TabletBladeDirectiveTest extends TestCase
     /** @test */
     public function it_will_display_else_if_exist_and_not_tablet()
     {
-        $this->expectReturn(true, false);
+        $this->expectDeviceReturn(true, false);
 
         $html = $this->blade->view()->make('test-else')->render();
 
@@ -47,7 +47,7 @@ class TabletBladeDirectiveTest extends TestCase
     /** @test */
     public function it_will_still_display_tablet_if_is_tablet_and_else_exists()
     {
-        $this->expectReturn(true, true);
+        $this->expectDeviceReturn(true, true);
 
         $html = $this->blade->view()->make('test-else')->render();
 
