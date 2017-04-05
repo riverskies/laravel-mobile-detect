@@ -17,7 +17,10 @@ class NotMobileBladeDirectiveTest extends TestCase
     /** @test */
     public function it_will_not_render_if_mobile()
     {
-        $this->expectDeviceReturn(true, false);
+        $this->expectMobileDetectReturn(function($md) {
+            $md->isMobile()->willReturn(true);
+            $md->isTablet()->willReturn(false);
+        });
 
         $html = $this->blade->view()->make('test')->render();
 
@@ -27,7 +30,10 @@ class NotMobileBladeDirectiveTest extends TestCase
     /** @test */
     public function it_will_render_if_tablet()
     {
-        $this->expectDeviceReturn(false, true);
+        $this->expectMobileDetectReturn(function($md) {
+            $md->isMobile()->willReturn(true);
+            $md->isTablet()->willReturn(true);
+        });
 
         $html = $this->blade->view()->make('test')->render();
 
@@ -37,7 +43,10 @@ class NotMobileBladeDirectiveTest extends TestCase
     /** @test */
     public function it_will_render_if_desktop()
     {
-        $this->expectDeviceReturn(false, false);
+        $this->expectMobileDetectReturn(function($md) {
+            $md->isMobile()->willReturn(false);
+            $md->isTablet()->willReturn(false);
+        });
 
         $html = $this->blade->view()->make('test')->render();
 
@@ -47,7 +56,10 @@ class NotMobileBladeDirectiveTest extends TestCase
     /** @test */
     public function it_will_display_else_if_exist_and_mobile()
     {
-        $this->expectDeviceReturn(true, false);
+        $this->expectMobileDetectReturn(function($md) {
+            $md->isMobile()->willReturn(true);
+            $md->isTablet()->willReturn(false);
+        });
 
         $html = $this->blade->view()->make('test-else')->render();
 

@@ -15,19 +15,11 @@ class AndroidBladeDirectiveTest extends TestCase
     }
 
     /** @test */
-    public function it_will_not_render_if_not_android()
-    {
-        $this->expectHandheldOSReturn(false);
-
-        $html = $this->blade->view()->make('test')->render();
-
-        $this->assertEquals('', $this->clean($html));
-    }
-
-    /** @test */
     public function it_will_render_if_android()
     {
-        $this->expectHandheldOSReturn(true);
+        $this->expectMobileDetectReturn(function($md) {
+            $md->is('Android')->willReturn(true);
+        });
 
         $html = $this->blade->view()->make('test')->render();
 
@@ -35,9 +27,23 @@ class AndroidBladeDirectiveTest extends TestCase
     }
 
     /** @test */
+    public function it_will_not_render_if_not_android()
+    {
+        $this->expectMobileDetectReturn(function($md) {
+            $md->is('Android')->willReturn(false);
+        });
+
+        $html = $this->blade->view()->make('test')->render();
+
+        $this->assertEquals('', $this->clean($html));
+    }
+
+    /** @test */
     public function it_will_display_else_if_exist_and_not_android()
     {
-        $this->expectHandheldOSReturn(false);
+        $this->expectMobileDetectReturn(function($md) {
+            $md->is('Android')->willReturn(false);
+        });
 
         $html = $this->blade->view()->make('test-else')->render();
 
@@ -47,7 +53,9 @@ class AndroidBladeDirectiveTest extends TestCase
     /** @test */
     public function it_will_still_display_android_if_is_android_and_else_exists()
     {
-        $this->expectHandheldOSReturn(true);
+        $this->expectMobileDetectReturn(function($md) {
+            $md->is('Android')->willReturn(true);
+        });
 
         $html = $this->blade->view()->make('test-else')->render();
 
