@@ -9,13 +9,13 @@ Responsive CSS may help to make content in the browser look nice on different de
 The package implements various Blade directives that you can use to serve different content from your Blade template for different device types.
 
 ### Installation
-
 Install the package through composer:
 
 ```sh
 $ composer require riverskies/laravel-mobile-detect
 ```
 
+### Laravel 5.4 or earlier
 Add the service provider to your **config/app.php** file:
 
 ```php
@@ -27,6 +27,7 @@ Optionally, you can add an alias as well if you'd like to use the underlying ins
 'MobileDetect' => 'Riverskies\Laravel\MobileDetect\Facades\MobileDetect::class
 ```
 
+### Usage
 Use the new Blade directives in your template files:
 
 ```php

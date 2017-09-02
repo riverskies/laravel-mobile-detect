@@ -15,6 +15,16 @@
             "Riverskies\\Laravel\\MobileDetect\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Riverskies\\Laravel\\MobileDetect\\MobileDetectServiceProvider"
+            ],
+            "aliases": {
+                "MobileDetect": "Riverskies\\Laravel\\MobileDetect\\Facades\\MobileDetect"
+            }
+        }
+    },
     "require": {
         "mobiledetect/mobiledetectlib": "^2.8"
     },
