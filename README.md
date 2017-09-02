@@ -24,7 +24,7 @@ Riverskies\Laravel\MobileDetect\MobileDetectServiceProvider::class
 
 Optionally, you can add an alias as well if you'd like to use the underlying instance anywhere else (or have access to all the functions):
 ```php
-'MobileDetect' => 'Riverskies\Laravel\MobileDetect\Facades\MobileDetect::class
+'MobileDetect' => Riverskies\Laravel\MobileDetect\Facades\MobileDetect::class
 ```
 
 ### Usage
