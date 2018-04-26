@@ -38,6 +38,8 @@ Use the new Blade directives in your template files:
 @enddesktop
 ```
 
+> **NOTE** You might have to run `php artisan view:clear` to have the new Blade directives take effect!
+
 ### Available directives
 `@desktop`, `@elsedesktop`, `@enddesktop` - for destkop devices
 
